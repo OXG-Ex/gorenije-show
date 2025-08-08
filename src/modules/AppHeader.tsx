@@ -1,10 +1,13 @@
-import MenuIcon from "@mui/icons-material/Menu";
-import {Button, IconButton} from "@mui/material";
+import {IconButton} from "@mui/material";
 import AppBar from "@mui/material/AppBar";
-import CssBaseline from "@mui/material/CssBaseline";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+
+import TelegramIcon from "@mui/icons-material/Telegram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+
 import * as React from "react";
 
 interface Props {
@@ -29,23 +32,34 @@ function ElevationScroll(props: Props) {
 export const AppHeader = (props: Props) => {
   return (
     <React.Fragment>
-      <CssBaseline />
       <ElevationScroll {...props}>
         <AppBar>
-          <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{mr: 2}}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" component="div" sx={{flexGrow: 1}}>
-              News
+          <Toolbar className="flex justify-between">
+            <Typography variant="h6" component="div">
+              ГОРЕНЬЕ ЛОГО
             </Typography>
-            <Button color="inherit">Login</Button>
+            <div className="flex gap-2">
+              <IconButton size="large" className="w-10">
+                <WhatsAppIcon />
+              </IconButton>
+
+              <IconButton>
+                <TelegramIcon />
+              </IconButton>
+
+              <IconButton>
+                <YouTubeIcon />
+              </IconButton>
+
+              <div className="flex flex-col gap-1.5 pt-2">
+                <Typography variant="h5" component="div">
+                  8-800-555-35-35
+                </Typography>
+                <Typography variant="body1" component="div">
+                  Заказать звонок
+                </Typography>
+              </div>
+            </div>
           </Toolbar>
         </AppBar>
       </ElevationScroll>

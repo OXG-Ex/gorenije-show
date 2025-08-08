@@ -11,11 +11,11 @@ import {
   Container,
   createTheme,
   ThemeProvider,
-  Typography,
 } from "@mui/material";
 import "./App.css";
 import {themeOptions} from "./lib/theme";
 import {AppHeader} from "./modules";
+import {CarouselEX} from "./modules/Carousel";
 
 const darkTheme = createTheme(themeOptions);
 
@@ -25,20 +25,17 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
+
       <AppHeader />
 
-      {/* The rest of your application */}
       <Button onClick={() => setCount((prev) => prev + 1)}>{count}</Button>
-      <main>This app is using the dark mode</main>
-      <Typography>SAS</Typography>
       <Container>
+        <CarouselEX />
         <Box sx={{my: 2}}>
           {[...new Array(122)]
             .map(
-              () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
+              () =>
+                `КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ `
             )
             .join("\n")}
         </Box>
