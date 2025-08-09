@@ -1,11 +1,17 @@
 import {Container, Paper, Typography} from "@mui/material";
 import type {FC} from "react";
 import {Gallery, Item} from "react-photoswipe-gallery";
+import Certificate_1min from "../assets/pictures/Certificate_1-min.jpg";
 import Certificate_1 from "../assets/pictures/Certificate_1.jpg";
+import Certificate_2min from "../assets/pictures/Certificate_2-min.jpg";
 import Certificate_2 from "../assets/pictures/Certificate_2.jpg";
+import Certificate_3min from "../assets/pictures/Certificate_3-min.jpg";
 import Certificate_3 from "../assets/pictures/Certificate_3.jpg";
+import Certificate_4min from "../assets/pictures/Certificate_4-min.jpeg";
 import Certificate_4 from "../assets/pictures/Certificate_4.jpeg";
+import Certificate_5min from "../assets/pictures/Certificate_5-min.jpg";
 import Certificate_5 from "../assets/pictures/Certificate_5.jpg";
+import Certificate_6min from "../assets/pictures/Certificate_6-min.jpg";
 import Certificate_6 from "../assets/pictures/Certificate_6.jpg";
 
 export const Certificates: FC = () => {
@@ -44,22 +50,32 @@ export const Certificates: FC = () => {
               }}
             >
               <div className="flex gap-2 p-1">
-                <Item id={`${1}-pic`} original={Certificate_1} cropped>
+                <Item
+                  id={`${1}-pic`}
+                  original={Certificate_1}
+                  thumbnail={Certificate_1min}
+                  cropped
+                >
                   {({ref, open}) => (
                     <img
                       ref={ref}
                       onClick={open}
-                      src={Certificate_1}
+                      src={Certificate_1min}
                       className="h-[25rem] w-[17.5rem] object-cover cursor-zoom-in bg-white  z-10 transition-opacity duration-300 hover:opacity-20"
                     />
                   )}
                 </Item>
-                <Item id={`${2}-pic`} original={Certificate_2} cropped>
+                <Item
+                  id={`${2}-pic`}
+                  original={Certificate_2}
+                  thumbnail={Certificate_2min}
+                  cropped
+                >
                   {({ref, open}) => (
                     <img
                       ref={ref}
                       onClick={open}
-                      src={Certificate_2}
+                      src={Certificate_2min}
                       className="h-[25rem] w-[17.5rem] object-cover cursor-zoom-in bg-white  z-10 transition-opacity duration-300 hover:opacity-20"
                     />
                   )}
@@ -78,42 +94,62 @@ export const Certificates: FC = () => {
             }}
           >
             <div className="flex gap-1">
-              <Item id={`${3}-pic`} original={Certificate_3} cropped>
+              <Item
+                id={`${3}-pic`}
+                original={Certificate_3}
+                thumbnail={Certificate_3min}
+                cropped
+              >
                 {({ref, open}) => (
                   <img
                     ref={ref}
                     onClick={open}
-                    src={Certificate_3}
+                    src={Certificate_3min}
                     className="h-[25rem] w-[17.5rem] object-cover cursor-zoom-in bg-white  z-10 transition-opacity duration-300 hover:opacity-20"
                   />
                 )}
               </Item>
-              <Item id={`${4}-pic`} original={Certificate_4} cropped>
+              <Item
+                id={`${4}-pic`}
+                original={Certificate_4}
+                thumbnail={Certificate_4min}
+                cropped
+              >
                 {({ref, open}) => (
                   <img
                     ref={ref}
                     onClick={open}
-                    src={Certificate_4}
+                    src={Certificate_4min}
                     className="h-[25rem] w-[17.5rem] object-cover cursor-zoom-in bg-white  z-10 transition-opacity duration-300 hover:opacity-20"
                   />
                 )}
               </Item>
-              <Item id={`${5}-pic`} original={Certificate_5} cropped>
+              <Item
+                id={`${5}-pic`}
+                original={Certificate_5}
+                thumbnail={Certificate_5min}
+                cropped
+              >
                 {({ref, open}) => (
                   <img
                     ref={ref}
                     onClick={open}
-                    src={Certificate_5}
+                    src={Certificate_5min}
                     className="h-[25rem] w-[17.5rem] object-cover cursor-zoom-in bg-white  z-10 transition-opacity duration-300 hover:opacity-20"
                   />
                 )}
               </Item>
-              <Item id={`${6}-pic`} original={Certificate_6} cropped>
+              <Item
+                id={`${6}-pic`}
+                original={Certificate_6}
+                thumbnail={Certificate_6min}
+                cropped
+              >
                 {({ref, open}) => (
                   <img
                     ref={ref}
                     onClick={open}
-                    src={Certificate_6}
+                    src={Certificate_6min}
                     className="h-[25rem] w-[17.5rem] object-cover cursor-zoom-in bg-white  z-10 transition-opacity duration-300 hover:opacity-20"
                   />
                 )}

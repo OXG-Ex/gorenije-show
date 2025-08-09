@@ -4,6 +4,11 @@ import AboutUs1 from "../assets/pictures/aboutUs_1.png";
 import AboutUs2 from "../assets/pictures/aboutUs_2.png";
 import AboutUs3 from "../assets/pictures/aboutUs_3.jpg";
 import AboutUs4 from "../assets/pictures/aboutUs_4.png";
+
+import AboutUs1min from "../assets/pictures/aboutUs_1-min.png";
+import AboutUs2min from "../assets/pictures/aboutUs_2-min.png";
+import AboutUs3min from "../assets/pictures/aboutUs_3-min.jpg";
+import AboutUs4min from "../assets/pictures/aboutUs_4-min.png";
 import {Gallery} from "../components/Gallery";
 
 interface AboutUsProps {
@@ -20,10 +25,10 @@ export const AboutUs: FunctionComponent<AboutUsProps> = () => {
         >
           <Gallery
             items={[
-              {original: AboutUs1, thumbnail: AboutUs1},
-              {original: AboutUs2, thumbnail: AboutUs2},
-              {original: AboutUs3, thumbnail: AboutUs3},
-              {original: AboutUs4, thumbnail: AboutUs4},
+              {original: AboutUs1, thumbnail: AboutUs1min},
+              {original: AboutUs2, thumbnail: AboutUs2min},
+              {original: AboutUs3, thumbnail: AboutUs3min},
+              {original: AboutUs4, thumbnail: AboutUs4min},
             ]}
           />
         </Paper>
