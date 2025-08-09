@@ -1,5 +1,6 @@
 import {Button, Typography} from "@mui/material";
 import type {FC} from "react";
+import topImage from "../assets/pictures/DSC_3832.jpg";
 
 export const TopPictureWithText: FC = () => {
   return (
@@ -23,7 +24,7 @@ export const TopPictureWithText: FC = () => {
         <div className="w-[50vw] h-[100vh]"></div>
       </div>
       <img
-        src="/public/pictures/DSC_3832.jpg "
+        src={topImage}
         className="absolute top-0 left-0 -z-[1] w-full h-[100vh] object-cover"
       />
     </>
