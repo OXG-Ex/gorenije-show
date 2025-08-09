@@ -17,6 +17,7 @@ export const themeOptions: ThemeOptions = {
   shape: {
     borderRadius: 8,
   },
+
   components: {
     MuiButton: {
       styleOverrides: {
