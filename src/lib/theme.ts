@@ -15,7 +15,7 @@ export const themeOptions: ThemeOptions = {
   },
   spacing: 8,
   shape: {
-    borderRadius: 8,
+    borderRadius: 16,
   },
 
   components: {

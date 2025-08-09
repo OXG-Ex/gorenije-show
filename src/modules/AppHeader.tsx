@@ -19,7 +19,7 @@ export const AppHeader = () => {
 
   return (
     <AppBar
-      color={trigger ? "warning" : "transparent"}
+      color={trigger ? "primary" : "transparent"}
       sx={{boxShadow: "none", transition: "background-color 0.2s linear 0s"}}
     >
       <Toolbar className="flex justify-between">
