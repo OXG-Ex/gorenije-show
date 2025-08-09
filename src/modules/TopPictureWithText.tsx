@@ -22,7 +22,7 @@ export const TopPictureWithText: FC = () => {
       </div>
       <img
         src="/public/pictures/DSC_3832.jpg "
-        className="absolute top-0 left-0"
+        className="absolute top-0 left-0 -z-[1] w-[50vw] h-[100vh]"
       />
     </>
   );
