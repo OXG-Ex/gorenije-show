@@ -24,7 +24,7 @@ function App() {
         <AboutUs />
 
         <ShowBlock
-          riderText={`▌`}
+          riderText={fireShowRiderText}
           videoSrc="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
           title="Огненное шоу"
           options={[
