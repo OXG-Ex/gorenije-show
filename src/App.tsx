@@ -27,9 +27,9 @@ function App() {
       <Button onClick={() => setCount((prev) => prev + 1)}>{count}</Button>
       <Carousel
         items={[
-          <img src="/public/pictures/IMG_8327.JPG" />,
-          <img src="/public/pictures/DSC_3870.jpg" />,
-          <img src="/public/pictures/IMG_2618.JPG" />,
+          <img src="/pictures/IMG_8327.JPG" />,
+          <img src="/pictures/DSC_3870.jpg" />,
+          <img src="/pictures/IMG_2618.JPG" />,
         ]}
       />
     </ThemeProvider>
