@@ -17,14 +17,6 @@ export const themeOptions: ThemeOptions = {
   shape: {
     borderRadius: 8,
   },
-  props: {
-    MuiAppBar: {
-      color: "transparent",
-    },
-    MuiTooltip: {
-      arrow: true,
-    },
-  },
   //   components: {
   //     MuiButton: {
   //       styleOverrides: {

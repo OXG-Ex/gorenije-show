@@ -5,17 +5,12 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import {
-  Box,
-  Button,
-  Container,
-  createTheme,
-  ThemeProvider,
-} from "@mui/material";
+import {Button, createTheme, ThemeProvider} from "@mui/material";
 import "./App.css";
+import {Carousel} from "./components/Carousel";
 import {themeOptions} from "./lib/theme";
 import {AppHeader} from "./modules";
-import {CarouselEX} from "./modules/Carousel";
+import {TopPictureWithText} from "./modules/TopPictureWithText";
 
 const darkTheme = createTheme(themeOptions);
 
@@ -27,19 +22,16 @@ function App() {
       <CssBaseline />
 
       <AppHeader />
+      <TopPictureWithText />
 
       <Button onClick={() => setCount((prev) => prev + 1)}>{count}</Button>
-      <Container>
-        <CarouselEX />
-        <Box sx={{my: 2}}>
-          {[...new Array(122)]
-            .map(
-              () =>
-                `КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ КОНТЕНТ `
-            )
-            .join("\n")}
-        </Box>
-      </Container>
+      <Carousel
+        items={[
+          <img src="/public/pictures/IMG_8327.JPG" />,
+          <img src="/public/pictures/DSC_3870.jpg" />,
+          <img src="/public/pictures/IMG_2618.JPG" />,
+        ]}
+      />
     </ThemeProvider>
   );
 }

@@ -10,60 +10,51 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 import * as React from "react";
 
-interface Props {
-  children?: React.ReactElement<{elevation?: number}>;
-}
-
-function ElevationScroll(props: Props) {
-  const {children} = props;
+export const AppHeader = () => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
     target: window,
   });
 
-  return children
-    ? React.cloneElement(children, {
-        elevation: trigger ? 4 : 0,
-      })
-    : null;
-}
-
-export const AppHeader = (props: Props) => {
   return (
     <React.Fragment>
-      <ElevationScroll {...props}>
-        <AppBar>
-          <Toolbar className="flex justify-between">
-            <Typography variant="h6" component="div">
-              ГОРЕНЬЕ ЛОГО
-            </Typography>
-            <div className="flex gap-2">
-              <IconButton size="large" className="w-10">
-                <WhatsAppIcon />
-              </IconButton>
+      <AppBar
+        color={trigger ? "warning" : "transparent"}
+        sx={{boxShadow: "none"}}
+      >
+        <Toolbar className="flex justify-between">
+          <Typography variant="h6" component="div">
+            ГОРЕНЬЕ ЛОГО
+          </Typography>
+          <div className="flex gap-2">
+            <IconButton
+              size="large"
+              className="w-10"
+              color={trigger ? "warning" : "default"}
+            >
+              <WhatsAppIcon />
+            </IconButton>
 
-              <IconButton>
-                <TelegramIcon />
-              </IconButton>
+            <IconButton color={trigger ? "warning" : "default"}>
+              <TelegramIcon />
+            </IconButton>
 
-              <IconButton>
-                <YouTubeIcon />
-              </IconButton>
+            <IconButton color={trigger ? "warning" : "default"}>
+              <YouTubeIcon />
+            </IconButton>
 
-              <div className="flex flex-col gap-1.5 pt-2">
-                <Typography variant="h5" component="div">
-                  8-800-555-35-35
-                </Typography>
-                <Typography variant="body1" component="div">
-                  Заказать звонок
-                </Typography>
-              </div>
+            <div className="flex flex-col gap-1.5 pt-2">
+              <Typography variant="h5" component="div">
+                8-800-555-35-35
+              </Typography>
+              <Typography variant="body1" component="div">
+                Заказать звонок
+              </Typography>
             </div>
-          </Toolbar>
-        </AppBar>
-      </ElevationScroll>
-      <Toolbar />
+          </div>
+        </Toolbar>
+      </AppBar>
     </React.Fragment>
   );
 };

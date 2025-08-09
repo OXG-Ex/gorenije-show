@@ -17,9 +17,9 @@
     "@mui/material": "^7.3.1",
     "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/vite": "^4.1.11",
+    "embla-carousel-react": "^8.6.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-material-ui-carousel": "^3.4.2",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
