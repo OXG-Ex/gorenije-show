@@ -6,6 +6,7 @@ import {fireShowRiderText} from "./lib/consts";
 import {themeOptions} from "./lib/theme";
 import {AppHeader} from "./modules";
 import {AboutUs} from "./modules/AboutUs";
+import {Certificates} from "./modules/Certificates";
 import ShowBlock from "./modules/ShowBlock";
 import {TopPictureWithText} from "./modules/TopPictureWithText";
 
@@ -112,6 +113,8 @@ function App() {
             "Доставка шоу в пределах города.",
           ]}
         />
+
+        <Certificates />
       </div>
     </ThemeProvider>
   );

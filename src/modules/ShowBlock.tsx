@@ -69,7 +69,7 @@ const ShowBlock: FC<ShowBlockProps> = ({
                   key={row.type}
                   sx={{"&:last-child td, &:last-child th": {border: 0}}}
                 >
-                  <TableCell component="h5" scope="row">
+                  <TableCell component="th" scope="row">
                     {row.type}
                   </TableCell>
                   <TableCell align="right">{row.timing}</TableCell>
