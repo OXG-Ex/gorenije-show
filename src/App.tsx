@@ -17,6 +17,43 @@ import fxBlock from "./assets/pictures/fx/colorSmoke-min.jpg";
 import lightBlock from "./assets/pictures/lightshow/lightTesla-min.jpg";
 import pyroBlockImage from "./assets/pictures/pyroshow/pyro_splitter-min.jpg";
 
+import mirror1 from "./assets/pictures/lightshow/mirror1.jpg";
+import mirror2 from "./assets/pictures/lightshow/mirror2.jpg";
+import mirror3 from "./assets/pictures/lightshow/mirror3.jpg";
+import mirror4 from "./assets/pictures/lightshow/mirror4.jpg";
+import mirror5 from "./assets/pictures/lightshow/mirror5.jpg";
+import mirror6 from "./assets/pictures/lightshow/mirror6.jpg";
+import mirror7 from "./assets/pictures/lightshow/mirror7.jpg";
+import mirror8 from "./assets/pictures/lightshow/mirror8.jpg";
+import mirror9 from "./assets/pictures/lightshow/mirror9.jpg";
+
+import mirror1min from "./assets/pictures/lightshow/mirror1-compressed.jpg";
+import mirror2min from "./assets/pictures/lightshow/mirror2-compressed.jpg";
+import mirror3min from "./assets/pictures/lightshow/mirror3-compressed.jpg";
+import mirror4min from "./assets/pictures/lightshow/mirror4-compressed.jpg";
+import mirror5min from "./assets/pictures/lightshow/mirror5-compressed.jpg";
+import mirror6min from "./assets/pictures/lightshow/mirror6-compressed.jpg";
+import mirror7min from "./assets/pictures/lightshow/mirror7-compressed.jpg";
+import mirror8min from "./assets/pictures/lightshow/mirror8-compressed.jpg";
+import mirror9min from "./assets/pictures/lightshow/mirror9-compressed.jpg";
+
+import tesla1min from "./assets/pictures/lightshow/tesla1-min.jpg";
+import tesla1 from "./assets/pictures/lightshow/tesla1.jpg";
+import tesla3min from "./assets/pictures/lightshow/tesla3-compressed.jpg";
+import tesla3 from "./assets/pictures/lightshow/tesla3.jpg";
+import tesla4min from "./assets/pictures/lightshow/tesla4-compressed.jpg";
+import tesla4 from "./assets/pictures/lightshow/tesla4.jpg";
+import tesla5min from "./assets/pictures/lightshow/tesla5-compressed.jpg";
+import tesla5 from "./assets/pictures/lightshow/tesla5.jpg";
+import tesla6min from "./assets/pictures/lightshow/tesla6-compressed.jpg";
+import tesla6 from "./assets/pictures/lightshow/tesla6.jpg";
+import tesla7min from "./assets/pictures/lightshow/tesla7-compressed.jpg";
+import tesla7 from "./assets/pictures/lightshow/tesla7.jpg";
+import tesla8min from "./assets/pictures/lightshow/tesla8-compressed.jpg";
+import tesla8 from "./assets/pictures/lightshow/tesla8.jpg";
+import tesla9min from "./assets/pictures/lightshow/tesla9-compressed.jpg";
+import tesla9 from "./assets/pictures/lightshow/tesla9.jpg";
+
 const darkTheme = createTheme(themeOptions);
 
 function App() {
@@ -139,6 +176,63 @@ function App() {
           imgSrc={lightBlock}
           subtitle=""
           title="Шоу для банкетного зала"
+        />
+
+        <ShowBlock
+          riderText={fireShowRiderText}
+          imagesSrc={[
+            {originalSrc: tesla1, thumbnailSrc: tesla1min},
+            {originalSrc: tesla3, thumbnailSrc: tesla3min},
+            {originalSrc: tesla4, thumbnailSrc: tesla4min},
+            {originalSrc: tesla5, thumbnailSrc: tesla5min},
+            {originalSrc: tesla6, thumbnailSrc: tesla6min},
+            {originalSrc: tesla7, thumbnailSrc: tesla7min},
+            {originalSrc: tesla8, thumbnailSrc: tesla8min},
+            {originalSrc: tesla9, thumbnailSrc: tesla9min},
+          ]}
+          title="Тесла-шоу"
+          options={[
+            {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
+            {price: "28 000 рублей", timing: "18 минут", type: "Дуэт"},
+            {price: "35 000 рублей", timing: "25 минут", type: "Трио"},
+          ]}
+          subtitles={[
+            "Жонглирование огненным реквизитом;",
+            "Оформление сцены пиротехникой;",
+            " Номер с огнеметом;",
+            "Огненное сердце в подарок;",
+            "Музыкальное сопровождение;",
+            "Доставка шоу в пределах города.",
+          ]}
+        />
+
+        <ShowBlock
+          riderText={fireShowRiderText}
+          imagesSrc={[
+            {originalSrc: mirror1, thumbnailSrc: mirror1min},
+            {originalSrc: mirror2, thumbnailSrc: mirror2min},
+            {originalSrc: mirror3, thumbnailSrc: mirror3min},
+            {originalSrc: mirror4, thumbnailSrc: mirror4min},
+            {originalSrc: mirror5, thumbnailSrc: mirror5min},
+            {originalSrc: mirror6, thumbnailSrc: mirror6min},
+            {originalSrc: mirror7, thumbnailSrc: mirror7min},
+            {originalSrc: mirror8, thumbnailSrc: mirror8min},
+            {originalSrc: mirror9, thumbnailSrc: mirror9min},
+          ]}
+          title="Зеркальное шоу"
+          options={[
+            {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
+            {price: "28 000 рублей", timing: "18 минут", type: "Дуэт"},
+            {price: "35 000 рублей", timing: "25 минут", type: "Трио"},
+          ]}
+          subtitles={[
+            "Жонглирование огненным реквизитом;",
+            "Оформление сцены пиротехникой;",
+            " Номер с огнеметом;",
+            "Огненное сердце в подарок;",
+            "Музыкальное сопровождение;",
+            "Доставка шоу в пределах города.",
+          ]}
         />
 
         <BlockSplitter imgSrc={fxBlock} subtitle="" title="Спецэффекты" />

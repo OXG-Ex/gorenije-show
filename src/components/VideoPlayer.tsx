@@ -12,7 +12,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({src}) => {
       muted
       controls
       className="w-full"
-      width="45%"
+      width="100%"
       height="100%"
     />
   );

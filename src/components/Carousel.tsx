@@ -4,9 +4,10 @@ import {useCallback, type FC, type ReactNode} from "react";
 
 type CarouselProps = {
   items: ReactNode[];
+  disableButtons?: boolean;
 };
 
-export const Carousel: FC<CarouselProps> = ({items}) => {
+export const Carousel: FC<CarouselProps> = ({items, disableButtons}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, []);
 
   const scrollPrev = useCallback(() => {
@@ -20,10 +21,10 @@ export const Carousel: FC<CarouselProps> = ({items}) => {
   return (
     <div className="embla relative">
       <div className="embla__viewport overflow-hidden" ref={emblaRef}>
-        <div className="embla__container flex">
+        <div className="embla__container flex gap-2">
           {items.map((item, idx) => (
             <div
-              className="embla__slide w-full grow-0 shrink-0 basis-full flex items-center justify-center "
+              className="embla__slide shrink-0 flex items-center justify-center "
               key={idx}
             >
               {item}
@@ -31,12 +32,22 @@ export const Carousel: FC<CarouselProps> = ({items}) => {
           ))}
         </div>
 
-        <Button className="embla__prev absolute top-1/2 " onClick={scrollPrev}>
-          Prev
-        </Button>
-        <Button className="embla__next absolute top-1/2 " onClick={scrollNext}>
-          Next
-        </Button>
+        {!disableButtons && (
+          <>
+            <Button
+              className="embla__prev absolute top-1/2 "
+              onClick={scrollPrev}
+            >
+              Prev
+            </Button>
+            <Button
+              className="embla__next absolute top-1/2 "
+              onClick={scrollNext}
+            >
+              Next
+            </Button>
+          </>
+        )}
       </div>
     </div>
   );

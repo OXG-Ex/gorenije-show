@@ -7,6 +7,9 @@ import {
   Typography,
 } from "@mui/material";
 import {useState, type FC, type ReactNode} from "react";
+import {Gallery} from "react-photoswipe-gallery";
+import {Carousel} from "../components/Carousel";
+import CarouselItem from "../components/CarouselItem";
 import {Transition} from "../components/Transition";
 import VideoPlayer from "../components/VideoPlayer";
 
@@ -21,7 +24,8 @@ interface ShowBlockProps {
   subtitles: string[];
   options: ShowOption[];
   riderText?: ReactNode;
-  videoSrc: string;
+  videoSrc?: string;
+  imagesSrc?: {thumbnailSrc: string; originalSrc: string}[];
 }
 
 const ShowBlock: FC<ShowBlockProps> = ({
@@ -30,6 +34,7 @@ const ShowBlock: FC<ShowBlockProps> = ({
   title,
   riderText,
   videoSrc,
+  imagesSrc,
 }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -45,7 +50,44 @@ const ShowBlock: FC<ShowBlockProps> = ({
         </div>
 
         <div className="flex w-full gap-9 items-center p-4">
-          <VideoPlayer src={videoSrc} />
+          <div className="flex w-full gap-4">
+            {videoSrc && <VideoPlayer src={videoSrc} />}
+
+            {imagesSrc && (
+              <Gallery
+                options={{
+                  showHideAnimationType: "zoom",
+                  thumbSelector: "true",
+                  initialZoomLevel: "fit",
+                  closeOnVerticalDrag: true,
+                }}
+              >
+                <div className="flex flex-col gap-2">
+                  <CarouselItem
+                    id={`${123}-pic`}
+                    original={imagesSrc[0].originalSrc}
+                    thumbnail={imagesSrc[0].thumbnailSrc}
+                    imageClassName={""}
+                  />
+
+                  <div className="flex gap-2 p-1">
+                    <Carousel
+                      disableButtons
+                      items={imagesSrc.slice(1).map((image, idx) => (
+                        <CarouselItem
+                          id={`${idx}-pic`}
+                          original={image.originalSrc}
+                          thumbnail={image.thumbnailSrc}
+                          imageClassName={"h-[15rem] w-[15rem] "}
+                        />
+                      ))}
+                    />
+                  </div>
+                </div>
+              </Gallery>
+            )}
+          </div>
+
           <div className="flex flex-col gap-6 w-[50%] shrink-0">
             <div className="flex flex-col gap-2">
               {subtitles.map((item) => (
