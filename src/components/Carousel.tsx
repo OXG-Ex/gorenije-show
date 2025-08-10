@@ -1,4 +1,5 @@
 import {Button} from "@mui/material";
+import AutoScroll from "embla-carousel-auto-scroll";
 import useEmblaCarousel from "embla-carousel-react";
 import {useCallback, type FC, type ReactNode} from "react";
 
@@ -8,7 +9,9 @@ type CarouselProps = {
 };
 
 export const Carousel: FC<CarouselProps> = ({items, disableButtons}) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, []);
+  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, [
+    AutoScroll({active: true, playOnInit: true, speed: 1}),
+  ]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();

@@ -1,4 +1,5 @@
-import {Typography} from "@mui/material";
+import {Typography, useMediaQuery, useTheme} from "@mui/material";
+import clsx from "clsx";
 import type {FC} from "react";
 
 interface BlockSplitterProps {
@@ -8,10 +9,18 @@ interface BlockSplitterProps {
 }
 
 const BlockSplitter: FC<BlockSplitterProps> = ({imgSrc, subtitle, title}) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <div className="w-full h-[25.5rem] relative  bg-gradient-to-br from-amber-800 to-transparent">
-      <div className="flex flex-col w-full h-full items-center justify-center gap-2">
-        <Typography variant="h2" fontWeight={600}>
+      <div
+        className={clsx(
+          "flex flex-col w-full h-full items-center justify-center gap-2",
+          isMobile && "pl-4"
+        )}
+      >
+        <Typography variant={isMobile ? "h4" : "h2"} fontWeight={600}>
           {title.toUpperCase()}
         </Typography>
         <Typography variant="h5">{subtitle.toUpperCase()}</Typography>

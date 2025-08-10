@@ -180,6 +180,7 @@ function App() {
 
         <ShowBlock
           riderText={fireShowRiderText}
+          videoSrc="https://171.22.117.126/videos/tesla.mov"
           imagesSrc={[
             {originalSrc: tesla1, thumbnailSrc: tesla1min},
             {originalSrc: tesla3, thumbnailSrc: tesla3min},
@@ -208,6 +209,7 @@ function App() {
 
         <ShowBlock
           riderText={fireShowRiderText}
+          videoSrc="https://171.22.117.126/videos/mirror.mov"
           imagesSrc={[
             {originalSrc: mirror1, thumbnailSrc: mirror1min},
             {originalSrc: mirror2, thumbnailSrc: mirror2min},

@@ -1,9 +1,18 @@
-import {Container, Dialog, Link, Toolbar, Typography} from "@mui/material";
+import {
+  Container,
+  Dialog,
+  Link,
+  Toolbar,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
+import clsx from "clsx";
 import {useState, type FC} from "react";
 import {ContactUsForm} from "../components/ContactUsForm";
 import {Transition} from "../components/Transition";
@@ -14,25 +23,45 @@ export const Footer: FC = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <>
       <Container className="pb-6">
-        <div className="flex gap-15">
+        <div className={clsx("flex gap-15", isMobile && "flex-col")}>
           <div className=" flex flex-col gap-4">
-            <Typography variant="h3">КОНТАКТЫ</Typography>
+            <Typography
+              variant="h3"
+              className={clsx(
+                isMobile && "flex w-full items-center justify-center"
+              )}
+            >
+              КОНТАКТЫ
+            </Typography>
 
-            <div className="flex flex-col gap-2">
+            <div
+              className={clsx(
+                "flex flex-col gap-4",
+                isMobile && "items-center"
+              )}
+            >
               <Link
                 href="tel:88005553535"
                 className="flex gap-4 items-center"
                 target="_blank"
                 rel="noref"
               >
-                <div className="w-14 h-14 rounded-4xl border-4 flex items-center justify-center transition-colors duration-300">
+                <div
+                  className={clsx(
+                    " flex rounded-4xl items-center justify-center transition-colors duration-300",
+                    isMobile ? "w-12 h-12 border-2" : "w-14 h-14 border-4"
+                  )}
+                >
                   <PhoneAndroidIcon />
                 </div>
                 <Typography
-                  variant="h4"
+                  variant={isMobile ? "h5" : "h4"}
                   fontWeight={600}
                   className="transition-colors duration-300"
                 >
@@ -46,11 +75,16 @@ export const Footer: FC = () => {
                 target="_blank"
                 rel="noref"
               >
-                <div className="w-14 h-14 rounded-4xl border-4 flex items-center justify-center transition-colors duration-300">
+                <div
+                  className={clsx(
+                    " flex rounded-4xl items-center justify-center transition-colors duration-300",
+                    isMobile ? "w-12 h-12 border-2" : "w-14 h-14 border-4"
+                  )}
+                >
                   <TelegramIcon />
                 </div>
                 <Typography
-                  variant="h4"
+                  variant={isMobile ? "h5" : "h4"}
                   fontWeight={600}
                   className="transition-colors duration-300"
                 >
@@ -64,11 +98,16 @@ export const Footer: FC = () => {
                 target="_blank"
                 rel="noref"
               >
-                <div className="w-14 h-14 rounded-4xl border-4 flex items-center justify-center transition-colors duration-300">
+                <div
+                  className={clsx(
+                    " flex rounded-4xl items-center justify-center transition-colors duration-300",
+                    isMobile ? "w-12 h-12 border-2" : "w-14 h-14 border-4"
+                  )}
+                >
                   <WhatsAppIcon />
                 </div>
                 <Typography
-                  variant="h4"
+                  variant={isMobile ? "h5" : "h4"}
                   fontWeight={600}
                   className="transition-colors duration-300"
                 >

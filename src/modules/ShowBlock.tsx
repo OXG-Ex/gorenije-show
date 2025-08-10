@@ -5,7 +5,10 @@ import {
   TableCell,
   TableRow,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
+import clsx from "clsx";
 import {useState, type FC, type ReactNode} from "react";
 import {Gallery} from "react-photoswipe-gallery";
 import {Carousel} from "../components/Carousel";
@@ -40,58 +43,78 @@ const ShowBlock: FC<ShowBlockProps> = ({
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Paper elevation={8} className="w-[80vw]">
       <div className="flex flex-col gap-7">
-        <div className="w-full flex items-center justify-center bg-amber-500 rounded-t-2xl">
-          <Typography variant="h4" fontWeight={600}>
+        <div className="w-full flex items-center justify-center bg-amber-500 rounded-t-2xl p-4">
+          <Typography variant={isMobile ? "h6" : "h4"} fontWeight={600}>
             {title.toUpperCase()}
           </Typography>
         </div>
 
-        <div className="flex w-full gap-9 items-center p-4">
+        <div
+          className={clsx(
+            "flex w-full gap-9 items-center p-4",
+            isMobile && "flex-col"
+          )}
+        >
           <div className="flex w-full gap-4">
-            {videoSrc && <VideoPlayer src={videoSrc} />}
+            <div className="flex flex-col gap-2">
+              {videoSrc && <VideoPlayer src={videoSrc} />}
 
-            {imagesSrc && (
-              <Gallery
-                options={{
-                  showHideAnimationType: "zoom",
-                  thumbSelector: "true",
-                  initialZoomLevel: "fit",
-                  closeOnVerticalDrag: true,
-                }}
-              >
-                <div className="flex flex-col gap-2">
-                  <CarouselItem
-                    id={`${123}-pic`}
-                    original={imagesSrc[0].originalSrc}
-                    thumbnail={imagesSrc[0].thumbnailSrc}
-                    imageClassName={""}
-                  />
+              {imagesSrc && (
+                <Gallery
+                  options={{
+                    showHideAnimationType: "zoom",
+                    thumbSelector: "true",
+                    initialZoomLevel: "fit",
+                    closeOnVerticalDrag: true,
+                  }}
+                >
+                  <div className="flex flex-col gap-2">
+                    {!videoSrc && (
+                      <CarouselItem
+                        id={`${123}-pic`}
+                        original={imagesSrc[0].originalSrc}
+                        thumbnail={imagesSrc[0].thumbnailSrc}
+                        imageClassName={""}
+                      />
+                    )}
 
-                  <div className="flex gap-2 p-1">
-                    <Carousel
-                      disableButtons
-                      items={imagesSrc.slice(1).map((image, idx) => (
-                        <CarouselItem
-                          id={`${idx}-pic`}
-                          original={image.originalSrc}
-                          thumbnail={image.thumbnailSrc}
-                          imageClassName={"h-[15rem] w-[15rem] "}
-                        />
-                      ))}
-                    />
+                    <div className="flex gap-2 p-1">
+                      <Carousel
+                        disableButtons
+                        items={imagesSrc.slice(1).map((image, idx) => (
+                          <CarouselItem
+                            id={`${idx}-pic`}
+                            original={image.originalSrc}
+                            thumbnail={image.thumbnailSrc}
+                            imageClassName={"h-[15rem] w-[15rem] "}
+                          />
+                        ))}
+                      />
+                    </div>
                   </div>
-                </div>
-              </Gallery>
-            )}
+                </Gallery>
+              )}
+            </div>
           </div>
 
-          <div className="flex flex-col gap-6 w-[50%] shrink-0">
+          <div
+            className={clsx(
+              "flex flex-col gap-6 shrink-0",
+              isMobile ? "w-full" : "w-[50%]"
+            )}
+          >
             <div className="flex flex-col gap-2">
               {subtitles.map((item) => (
-                <Typography variant="h6" key={item}>{`• ${item}`}</Typography>
+                <Typography
+                  variant={isMobile ? "body1" : "h6"}
+                  key={item}
+                >{`• ${item}`}</Typography>
               ))}
             </div>
 
