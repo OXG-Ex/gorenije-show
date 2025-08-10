@@ -75,7 +75,7 @@ function App() {
 
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="http://171.22.117.126/videos/estrada.mp4"
+          videoSrc="https://171.22.117.126/videos/estrada.mp4"
           title='Огненное шоу "Русская эстрада"'
           options={[
             {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
@@ -94,7 +94,7 @@ function App() {
 
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="http://171.22.117.126/videos/russian.mp4"
+          videoSrc="https://171.22.117.126/videos/russian.mp4"
           title='Огненное шоу "Русские сказки"'
           options={[
             {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
@@ -112,7 +112,7 @@ function App() {
         />
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="http://171.22.117.126/videos/golden.mov"
+          videoSrc="https://171.22.117.126/videos/golden.mov"
           title='Огненное шоу "Golden Dream"'
           options={[
             {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
@@ -137,7 +137,7 @@ function App() {
 
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="http://171.22.117.126/videos/dragon.MP4"
+          videoSrc="https://171.22.117.126/videos/dragon.MP4"
           title='Пиротехническое шоу "Дракон"'
           options={[
             {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
@@ -155,7 +155,7 @@ function App() {
         />
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="http://171.22.117.126/videos/sparcle.mov"
+          videoSrc="https://171.22.117.126/videos/sparcle.mov"
           title='Пиротехническое шоу "Sparkle Night"'
           options={[
             {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
