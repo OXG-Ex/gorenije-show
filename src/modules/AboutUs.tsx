@@ -1,14 +1,14 @@
 import {Button, Container, Paper, Typography} from "@mui/material";
 import type {FunctionComponent} from "react";
-import AboutUs1 from "../assets/pictures/aboutUs_1.png";
-import AboutUs2 from "../assets/pictures/aboutUs_2.png";
-import AboutUs3 from "../assets/pictures/aboutUs_3.jpg";
-import AboutUs4 from "../assets/pictures/aboutUs_4.png";
+import AboutUs1 from "../assets/pictures/aboutUs/aboutUs_1.png";
+import AboutUs2 from "../assets/pictures/aboutUs/aboutUs_2.png";
+import AboutUs3 from "../assets/pictures/aboutUs/aboutUs_3.jpg";
+import AboutUs4 from "../assets/pictures/aboutUs/aboutUs_4.png";
 
-import AboutUs1min from "../assets/pictures/aboutUs_1-min.png";
-import AboutUs2min from "../assets/pictures/aboutUs_2-min.png";
-import AboutUs3min from "../assets/pictures/aboutUs_3-min.jpg";
-import AboutUs4min from "../assets/pictures/aboutUs_4-min.png";
+import AboutUs1min from "../assets/pictures/aboutUs/aboutUs_1-min.png";
+import AboutUs2min from "../assets/pictures/aboutUs/aboutUs_2-min.png";
+import AboutUs3min from "../assets/pictures/aboutUs/aboutUs_3-min.jpg";
+import AboutUs4min from "../assets/pictures/aboutUs/aboutUs_4-min.png";
 import {Gallery} from "../components/Gallery";
 
 interface AboutUsProps {

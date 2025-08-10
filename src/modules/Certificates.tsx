@@ -1,18 +1,18 @@
 import {Container, Paper, Typography} from "@mui/material";
 import type {FC} from "react";
 import {Gallery, Item} from "react-photoswipe-gallery";
-import Certificate_1min from "../assets/pictures/Certificate_1-min.jpg";
-import Certificate_1 from "../assets/pictures/Certificate_1.jpg";
-import Certificate_2min from "../assets/pictures/Certificate_2-min.jpg";
-import Certificate_2 from "../assets/pictures/Certificate_2.jpg";
-import Certificate_3min from "../assets/pictures/Certificate_3-min.jpg";
-import Certificate_3 from "../assets/pictures/Certificate_3.jpg";
-import Certificate_4min from "../assets/pictures/Certificate_4-min.jpeg";
-import Certificate_4 from "../assets/pictures/Certificate_4.jpeg";
-import Certificate_5min from "../assets/pictures/Certificate_5-min.jpg";
-import Certificate_5 from "../assets/pictures/Certificate_5.jpg";
-import Certificate_6min from "../assets/pictures/Certificate_6-min.jpg";
-import Certificate_6 from "../assets/pictures/Certificate_6.jpg";
+import Certificate_1min from "../assets/pictures/certificates/Certificate_1-min.jpg";
+import Certificate_1 from "../assets/pictures/certificates/Certificate_1.jpg";
+import Certificate_2min from "../assets/pictures/certificates/Certificate_2-min.jpg";
+import Certificate_2 from "../assets/pictures/certificates/Certificate_2.jpg";
+import Certificate_3min from "../assets/pictures/certificates/Certificate_3-min.jpg";
+import Certificate_3 from "../assets/pictures/certificates/Certificate_3.jpg";
+import Certificate_4min from "../assets/pictures/certificates/Certificate_4-min.jpeg";
+import Certificate_4 from "../assets/pictures/certificates/Certificate_4.jpeg";
+import Certificate_5min from "../assets/pictures/certificates/Certificate_5-min.jpg";
+import Certificate_5 from "../assets/pictures/certificates/Certificate_5.jpg";
+import Certificate_6min from "../assets/pictures/certificates/Certificate_6-min.jpg";
+import Certificate_6 from "../assets/pictures/certificates/Certificate_6.jpg";
 
 export const Certificates: FC = () => {
   return (

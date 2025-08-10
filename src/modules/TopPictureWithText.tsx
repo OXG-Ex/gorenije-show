@@ -1,6 +1,6 @@
 import {Button, Typography} from "@mui/material";
 import type {FC} from "react";
-import topImage from "../assets/pictures/DSC_3832-min.jpg";
+import topImage from "../assets/pictures/fireshow/topImage-min.jpg";
 
 export const TopPictureWithText: FC = () => {
   return (
