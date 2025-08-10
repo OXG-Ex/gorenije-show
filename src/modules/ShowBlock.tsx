@@ -2,13 +2,12 @@ import {
   Button,
   Dialog,
   Paper,
-  Slide,
   TableCell,
   TableRow,
   Typography,
 } from "@mui/material";
-import type {TransitionProps} from "@mui/material/transitions";
-import React, {useState, type FC, type ReactNode} from "react";
+import {useState, type FC, type ReactNode} from "react";
+import {Transition} from "../components/Transition";
 import VideoPlayer from "../components/VideoPlayer";
 
 type ShowOption = {
@@ -24,15 +23,6 @@ interface ShowBlockProps {
   riderText?: ReactNode;
   videoSrc: string;
 }
-
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement<unknown, string>;
-  },
-  ref: React.Ref<unknown>
-) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 
 const ShowBlock: FC<ShowBlockProps> = ({
   options,

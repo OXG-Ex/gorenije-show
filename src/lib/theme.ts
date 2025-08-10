@@ -32,5 +32,15 @@ export const themeOptions: ThemeOptions = {
         },
       },
     },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: "none",
+          ":hover": {
+            color: "white",
+          },
+        },
+      },
+    },
   },
 };
