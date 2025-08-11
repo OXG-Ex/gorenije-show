@@ -75,7 +75,7 @@ function App() {
 
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="https://171.22.117.126/videos/estrada.mp4"
+          videoSrc="https://oxgex.ru/videos/estrada.mp4"
           title='Огненное шоу "Русская эстрада"'
           options={[
             {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
@@ -94,7 +94,7 @@ function App() {
 
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="https://171.22.117.126/videos/russian.mp4"
+          videoSrc="https://oxgex.ru/videos/russian.mp4"
           title='Огненное шоу "Русские сказки"'
           options={[
             {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
@@ -112,7 +112,7 @@ function App() {
         />
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="https://171.22.117.126/videos/golden.mov"
+          videoSrc="https://oxgex.ru/videos/golden.mov"
           title='Огненное шоу "Golden Dream"'
           options={[
             {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
@@ -137,7 +137,7 @@ function App() {
 
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="https://171.22.117.126/videos/dragon.MP4"
+          videoSrc="https://oxgex.ru/videos/dragon.MP4"
           title='Пиротехническое шоу "Дракон"'
           options={[
             {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
@@ -155,7 +155,7 @@ function App() {
         />
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="https://171.22.117.126/videos/sparcle.mov"
+          videoSrc="https://oxgex.ru/videos/sparcle.mov"
           title='Пиротехническое шоу "Sparkle Night"'
           options={[
             {price: "22 000 рублей", timing: "15 минут", type: "Соло"},
@@ -180,7 +180,7 @@ function App() {
 
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="https://171.22.117.126/videos/tesla.mov"
+          videoSrc="https://oxgex.ru/videos/tesla.mov"
           imagesSrc={[
             {originalSrc: tesla1, thumbnailSrc: tesla1min},
             {originalSrc: tesla3, thumbnailSrc: tesla3min},
@@ -209,7 +209,7 @@ function App() {
 
         <ShowBlock
           riderText={fireShowRiderText}
-          videoSrc="https://171.22.117.126/videos/mirror.mov"
+          videoSrc="https://oxgex.ru/videos/mirror.mov"
           imagesSrc={[
             {originalSrc: mirror1, thumbnailSrc: mirror1min},
             {originalSrc: mirror2, thumbnailSrc: mirror2min},
