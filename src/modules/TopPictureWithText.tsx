@@ -1,7 +1,7 @@
 import {Button, Typography, useMediaQuery, useTheme} from "@mui/material";
 import clsx from "clsx";
 import type {FC} from "react";
-import topImage from "../assets/pictures/fireshow/topImage-min.jpg";
+import topImage from "../assets/pictures/fireshow/topImage-min.webp";
 
 export const TopPictureWithText: FC = () => {
   const theme = useTheme();
