@@ -7,16 +7,16 @@ import {
   useTheme,
 } from "@mui/material";
 import type {FunctionComponent} from "react";
-import AboutUs1 from "../assets/pictures/aboutUs/aboutUs_1.png";
-import AboutUs2 from "../assets/pictures/aboutUs/aboutUs_2.png";
-import AboutUs3 from "../assets/pictures/aboutUs/aboutUs_3.jpg";
-import AboutUs4 from "../assets/pictures/aboutUs/aboutUs_4.png";
+// import AboutUs1 from "../assets/pictures/aboutUs/aboutUs_1.png";
+// import AboutUs2 from "../assets/pictures/aboutUs/aboutUs_2.png";
+// import AboutUs3 from "../assets/pictures/aboutUs/aboutUs_3.jpg";
+// import AboutUs4 from "../assets/pictures/aboutUs/aboutUs_4.png";
 
 import clsx from "clsx";
-import AboutUs1min from "../assets/pictures/aboutUs/aboutUs_1-min.png";
-import AboutUs2min from "../assets/pictures/aboutUs/aboutUs_2-min.png";
-import AboutUs3min from "../assets/pictures/aboutUs/aboutUs_3-min.jpg";
-import AboutUs4min from "../assets/pictures/aboutUs/aboutUs_4-min.png";
+// import AboutUs1min from "../assets/pictures/aboutUs/aboutUs_1-min.png";
+// import AboutUs2min from "../assets/pictures/aboutUs/aboutUs_2-min.png";
+// import AboutUs3min from "../assets/pictures/aboutUs/aboutUs_3-min.jpg";
+// import AboutUs4min from "../assets/pictures/aboutUs/aboutUs_4-min.png";
 import {Gallery} from "../components/Gallery";
 
 export const AboutUs: FunctionComponent = () => {
@@ -37,10 +37,10 @@ export const AboutUs: FunctionComponent = () => {
         >
           <Gallery
             items={[
-              {original: AboutUs1, thumbnail: AboutUs1min},
-              {original: AboutUs2, thumbnail: AboutUs2min},
-              {original: AboutUs3, thumbnail: AboutUs3min},
-              {original: AboutUs4, thumbnail: AboutUs4min},
+              {original: "AboutUs1", thumbnail: "AboutUs1min"},
+              {original: "AboutUs2", thumbnail: "AboutUs2min"},
+              {original: "AboutUs3", thumbnail: "AboutUs3min"},
+              {original: "AboutUs4", thumbnail: "AboutUs4min"},
             ]}
           />
         </Paper>
