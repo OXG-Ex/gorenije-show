@@ -114,6 +114,5 @@ export const allImages = {
 };
 
 export const getImageUrl = (path: string): string => {
-  console.log(firePyrotechnicShow_SparkleNightImages);
   return (allImages[path] as {default: string})?.default || "777";
 };

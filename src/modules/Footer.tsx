@@ -16,7 +16,12 @@ import clsx from "clsx";
 import {useState, type FC} from "react";
 import {ContactUsForm} from "../components/ContactUsForm";
 import {Transition} from "../components/Transition";
-import {dataPolitic} from "../lib/consts";
+import {
+  dataPolitic,
+  PhoneNumber,
+  TelegramLink,
+  WhatsAppLink,
+} from "../lib/consts";
 
 export const Footer: FC = () => {
   const [open, setOpen] = useState(false);
@@ -47,7 +52,10 @@ export const Footer: FC = () => {
               )}
             >
               <Link
-                href="tel:88005553535"
+                href={`tel:${PhoneNumber.replaceAll(" ", "").replace(
+                  "+7",
+                  "8"
+                )}`}
                 className="flex gap-4 items-center"
                 target="_blank"
                 rel="noref"
@@ -65,12 +73,12 @@ export const Footer: FC = () => {
                   fontWeight={600}
                   className="transition-colors duration-300"
                 >
-                  +7 (800) 555-35-35
+                  {PhoneNumber}
                 </Typography>
               </Link>
 
               <Link
-                href="https://t.me/oxgex"
+                href={TelegramLink}
                 className="flex gap-4 items-center"
                 target="_blank"
                 rel="noref"
@@ -93,7 +101,7 @@ export const Footer: FC = () => {
               </Link>
 
               <Link
-                href="https://wa.me/88005553535"
+                href={WhatsAppLink}
                 className="flex gap-4 items-center"
                 target="_blank"
                 rel="noref"
