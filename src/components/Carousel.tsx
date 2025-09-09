@@ -6,14 +6,9 @@ import {useCallback, type FC, type ReactNode} from "react";
 type CarouselProps = {
   items: ReactNode[];
   disableButtons?: boolean;
-  itemsContainerClassName?: string;
 };
 
-export const Carousel: FC<CarouselProps> = ({
-  items,
-  disableButtons,
-  itemsContainerClassName,
-}) => {
+export const Carousel: FC<CarouselProps> = ({items, disableButtons}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, [
     AutoScroll({active: true, playOnInit: true, speed: 1}),
   ]);
