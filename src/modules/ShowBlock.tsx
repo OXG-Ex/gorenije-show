@@ -29,6 +29,7 @@ interface ShowBlockProps {
   riderText?: ReactNode;
   videoSrc?: string;
   imagesSrc?: {thumbnailSrc: string; originalSrc: string}[];
+  headerImg?: string;
 }
 
 const ShowBlock: FC<ShowBlockProps> = ({
@@ -38,6 +39,7 @@ const ShowBlock: FC<ShowBlockProps> = ({
   riderText,
   videoSrc,
   imagesSrc,
+  headerImg,
 }) => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -49,10 +51,20 @@ const ShowBlock: FC<ShowBlockProps> = ({
   return (
     <Paper elevation={8} className="w-[80vw]">
       <div className="flex flex-col gap-7">
-        <div className="w-full flex items-center justify-center bg-amber-500 rounded-t-2xl p-4">
-          <Typography variant={isMobile ? "h6" : "h4"} fontWeight={600}>
+        <div className="w-full flex items-center justify-center bg-transparent rounded-t-2xl p-4 relative overflow-hidden h-40">
+          <Typography
+            variant={isMobile ? "h6" : "h4"}
+            fontWeight={600}
+            className="z-1 text-shadow-lg/30"
+          >
             {title.toUpperCase()}
           </Typography>
+          {headerImg && (
+            <img
+              src={headerImg}
+              className="absolute top-0 left-0 z-0 w-full h-full object-cover"
+            />
+          )}
         </div>
 
         <div
