@@ -6,9 +6,14 @@ import {useCallback, type FC, type ReactNode} from "react";
 type CarouselProps = {
   items: ReactNode[];
   disableButtons?: boolean;
+  itemsContainerClassName?: string;
 };
 
-export const Carousel: FC<CarouselProps> = ({items, disableButtons}) => {
+export const Carousel: FC<CarouselProps> = ({
+  items,
+  disableButtons,
+  itemsContainerClassName,
+}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, [
     AutoScroll({active: true, playOnInit: true, speed: 1}),
   ]);
@@ -27,7 +32,7 @@ export const Carousel: FC<CarouselProps> = ({items, disableButtons}) => {
         <div className="embla__container flex gap-2">
           {items.map((item, idx) => (
             <div
-              className="embla__slide shrink-0 flex items-center justify-center "
+              className="embla__slide shrink-0 flex items-center justify-center"
               key={idx}
             >
               {item}

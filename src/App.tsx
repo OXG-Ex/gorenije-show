@@ -7,7 +7,6 @@ import {themeOptions} from "./lib/theme";
 import {AppHeader} from "./modules";
 import {AboutUs} from "./modules/AboutUs";
 import BlockSplitter from "./modules/BlockSplitter";
-import {Certificates} from "./modules/Certificates";
 import {Footer} from "./modules/Footer";
 import ShowBlock from "./modules/ShowBlock";
 import {TopPictureWithText} from "./modules/TopPictureWithText";
@@ -232,7 +231,7 @@ function App() {
 
         {/* <BlockSplitter imgSrc={fxBlock} subtitle="" title="Спецэффекты" /> */}
 
-        <Certificates />
+        {/* <Certificates /> */}
       </div>
 
       <Footer />
