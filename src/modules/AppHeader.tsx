@@ -42,7 +42,7 @@ export const AppHeader = () => {
         <div
           className={clsx(
             "flex gap-2",
-            isMobile && "flex-col-reverse items-end"
+            isMobile && "flex-col-reverse items-end",
           )}
         >
           <div className="flex gap-2">
@@ -51,6 +51,9 @@ export const AppHeader = () => {
               className="w-10"
               color={trigger ? "warning" : "default"}
               sx={{transition: "background-color 0.2s linear 0s"}}
+              href="https://wa.me/79045047359"
+              target="_blank"
+              rel="noref"
             >
               <WhatsAppIcon />
             </IconButton>
@@ -58,6 +61,9 @@ export const AppHeader = () => {
             <IconButton
               color={trigger ? "warning" : "default"}
               sx={{transition: "background-color 0.2s linear 0s"}}
+              href="https://t.me/RitaGorenieShow"
+              target="_blank"
+              rel="noref"
             >
               <TelegramIcon />
             </IconButton>
@@ -65,6 +71,9 @@ export const AppHeader = () => {
             <IconButton
               color={trigger ? "warning" : "default"}
               sx={{transition: "background-color 0.2s linear 0s"}}
+              href="https://vk.com/gorenjeshow"
+              target="_blank"
+              rel="noref"
             >
               <SvgIcon component={VkIcon} inheritViewBox />
             </IconButton>
@@ -73,7 +82,7 @@ export const AppHeader = () => {
           <div
             className={clsx(
               "flex flex-col gap-1.5 pt-2",
-              isMobile && "items-end"
+              isMobile && "items-end",
             )}
           >
             <Typography
@@ -84,17 +93,6 @@ export const AppHeader = () => {
             >
               {PhoneNumber}
             </Typography>
-
-            {!isMobile && (
-              <Typography
-                variant="body1"
-                component="div"
-                color={trigger ? "warning" : "default"}
-                sx={{transition: "background-color 0.2s linear 0s"}}
-              >
-                Заказать звонок
-              </Typography>
-            )}
           </div>
         </div>
       </Toolbar>

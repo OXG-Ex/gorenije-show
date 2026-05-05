@@ -1,6 +1,5 @@
 import {
   Button,
-  Dialog,
   Paper,
   TableCell,
   TableRow,
@@ -9,11 +8,10 @@ import {
   useTheme,
 } from "@mui/material";
 import clsx from "clsx";
-import {useState, type FC, type ReactNode} from "react";
+import {type FC, type ReactNode} from "react";
 import {Gallery} from "react-photoswipe-gallery";
 import {Carousel} from "../components/Carousel";
 import CarouselItem from "../components/CarouselItem";
-import {Transition} from "../components/Transition";
 import VideoPlayer from "../components/VideoPlayer";
 
 type ShowOption = {
@@ -36,14 +34,14 @@ const ShowBlock: FC<ShowBlockProps> = ({
   options,
   subtitles,
   title,
-  riderText,
+  // riderText,
   videoSrc,
   imagesSrc,
   headerImg,
 }) => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  // const [open, setOpen] = useState(false);
+  // const handleOpen = () => setOpen(true);
+  // const handleClose = () => setOpen(false);
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -70,7 +68,7 @@ const ShowBlock: FC<ShowBlockProps> = ({
         <div
           className={clsx(
             "flex w-full gap-9 items-center p-4",
-            isMobile && "flex-col"
+            isMobile && "flex-col",
           )}
         >
           <div className="flex w-full gap-4">
@@ -118,7 +116,7 @@ const ShowBlock: FC<ShowBlockProps> = ({
           <div
             className={clsx(
               "flex flex-col gap-6 shrink-0",
-              isMobile ? "w-full" : "w-[50%]"
+              isMobile ? "w-full" : "w-[50%]",
             )}
           >
             <div className="flex flex-col gap-2">
@@ -130,26 +128,49 @@ const ShowBlock: FC<ShowBlockProps> = ({
               ))}
             </div>
 
-            <div>
+            <div
+              className={clsx(
+                "flex flex-col overflow-x-scroll",
+                !isMobile &&
+                  "scrollbar-hide [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+              )}
+            >
               {options.map((row) => (
                 <TableRow
                   key={row.type}
-                  sx={{"&:last-child td, &:last-child th": {border: 0}}}
+                  sx={{
+                    "&:last-child td, &:last-child th": {
+                      border: 0,
+                    },
+                    display: "flex",
+                  }}
                 >
-                  <TableCell component="th" scope="row">
+                  <TableCell component="th" scope="row" sx={{fontSize: "1rem"}}>
                     {row.type}
                   </TableCell>
-                  <TableCell align="right">{row.timing}</TableCell>
-                  <TableCell align="right">{row.price}</TableCell>
+                  <TableCell align="right" sx={{fontSize: "1rem"}}>
+                    {row.timing}
+                  </TableCell>
+                  <TableCell
+                    align="right"
+                    sx={{fontSize: "1rem", fontWeight: "600"}}
+                  >
+                    {row.price}
+                  </TableCell>
                 </TableRow>
               ))}
             </div>
 
-            <Button variant="outlined" onClick={handleOpen}>
-              Открыть технический райдер
+            <Button
+              variant="outlined"
+              href="https://vk.com/gorenjeshow"
+              target="_blank"
+              rel="noref"
+            >
+              Узнать детали
             </Button>
 
-            <Dialog
+            {/* <Dialog
               open={open}
               slots={{
                 transition: Transition,
@@ -162,7 +183,7 @@ const ShowBlock: FC<ShowBlockProps> = ({
                 </Typography>
                 {riderText}
               </div>
-            </Dialog>
+            </Dialog> */}
           </div>
         </div>
       </div>

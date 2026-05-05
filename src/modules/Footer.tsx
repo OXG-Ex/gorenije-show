@@ -1,35 +1,21 @@
-import {
-  Container,
-  Dialog,
-  Link,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import {Container, Link, Toolbar, Typography} from "@mui/material";
 
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 import clsx from "clsx";
-import {useState, type FC} from "react";
-import {ContactUsForm} from "../components/ContactUsForm";
-import {Transition} from "../components/Transition";
-import {
-  dataPolitic,
-  PhoneNumber,
-  TelegramLink,
-  WhatsAppLink,
-} from "../lib/consts";
+import {type FC} from "react";
+import {PhoneNumber, TelegramLink, WhatsAppLink} from "../lib/consts";
 
 export const Footer: FC = () => {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  // const [open, setOpen] = useState(false);
+  // const handleOpen = () => setOpen(true);
+  // const handleClose = () => setOpen(false);
 
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  // const theme = useTheme();
+  const isMobile = true;
+  //  useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <>
@@ -39,7 +25,7 @@ export const Footer: FC = () => {
             <Typography
               variant="h3"
               className={clsx(
-                isMobile && "flex w-full items-center justify-center"
+                isMobile && "flex w-full items-center justify-center",
               )}
             >
               КОНТАКТЫ
@@ -48,13 +34,13 @@ export const Footer: FC = () => {
             <div
               className={clsx(
                 "flex flex-col gap-4",
-                isMobile && "items-center"
+                isMobile && "items-center",
               )}
             >
               <Link
                 href={`tel:${PhoneNumber.replaceAll(" ", "").replace(
                   "+7",
-                  "8"
+                  "8",
                 )}`}
                 className="flex gap-4 items-center"
                 target="_blank"
@@ -63,7 +49,7 @@ export const Footer: FC = () => {
                 <div
                   className={clsx(
                     " flex rounded-4xl items-center justify-center transition-colors duration-300",
-                    isMobile ? "w-12 h-12 border-2" : "w-14 h-14 border-4"
+                    isMobile ? "w-12 h-12 border-2" : "w-14 h-14 border-4",
                   )}
                 >
                   <PhoneAndroidIcon />
@@ -86,7 +72,7 @@ export const Footer: FC = () => {
                 <div
                   className={clsx(
                     " flex rounded-4xl items-center justify-center transition-colors duration-300",
-                    isMobile ? "w-12 h-12 border-2" : "w-14 h-14 border-4"
+                    isMobile ? "w-12 h-12 border-2" : "w-14 h-14 border-4",
                   )}
                 >
                   <TelegramIcon />
@@ -109,7 +95,7 @@ export const Footer: FC = () => {
                 <div
                   className={clsx(
                     " flex rounded-4xl items-center justify-center transition-colors duration-300",
-                    isMobile ? "w-12 h-12 border-2" : "w-14 h-14 border-4"
+                    isMobile ? "w-12 h-12 border-2" : "w-14 h-14 border-4",
                   )}
                 >
                   <WhatsAppIcon />
@@ -124,22 +110,24 @@ export const Footer: FC = () => {
               </Link>
             </div>
           </div>
-          <div className=" flex flex-col gap-4 self-stretch max-w-full grow">
+          {/* <div className=" flex flex-col gap-4 self-stretch max-w-full grow">
             <ContactUsForm />
-          </div>
+          </div> */}
         </div>
       </Container>
       <Toolbar className="border-t ">
         <Container className="flex items-center justify-between">
-          <Typography>© 2025 www.gorenije-show.ru</Typography>
+          <Typography>
+            © {new Date().getFullYear()} https://rostovfire.ru/
+          </Typography>
           {/* <Typography>Политика конфиденциальности</Typography> */}
 
-          <Link component={"button"} onClick={handleOpen}>
-            {/* Открыть технический райдер */}
-            <Typography>Политика конфиденциальности</Typography>
-          </Link>
+          {/* <Link component={"button"} onClick={handleOpen}> */}
+          {/* Открыть технический райдер */}
+          {/* <Typography>Политика конфиденциальности</Typography> */}
+          {/* </Link> */}
 
-          <Dialog
+          {/* <Dialog
             open={open}
             slots={{
               transition: Transition,
@@ -152,7 +140,7 @@ export const Footer: FC = () => {
               </Typography>
               {dataPolitic}
             </div>
-          </Dialog>
+          </Dialog> */}
         </Container>
       </Toolbar>
     </>

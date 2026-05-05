@@ -11,14 +11,14 @@ export const TopPictureWithText: FC = () => {
     <>
       <div
         className={clsx(
-          "flex justify-between bg-gradient-to-br from-amber-500 to-transparent",
-          isMobile && "flex-col-reverse"
+          "flex justify-between bg-linear-to-br from-amber-500 to-transparent",
+          isMobile && "flex-col-reverse",
         )}
       >
         <div
           className={clsx(
             " flex flex-col gap-4 items-center justify-center",
-            isMobile ? "w-[100vw] h-[50vh]" : "w-[50vw] h-[100vh]"
+            isMobile ? "w-screen h-[50vh]" : "w-[50vw] h-screen",
           )}
         >
           <div className="flex flex-col gap-2">
@@ -39,19 +39,17 @@ export const TopPictureWithText: FC = () => {
             </Typography>
           </div>
 
-          <Button onClick={() => alert("УЗНАТЬ СТОИМОСТЬ")}>
+          <Button href="https://vk.com/gorenjeshow" target="_blank" rel="noref">
             УЗНАТЬ СТОИМОСТЬ
           </Button>
         </div>
         <div
-          className={clsx(
-            isMobile ? "w-[100vw] h-[50vh]" : "w-[50vw] h-[100vh]"
-          )}
+          className={clsx(isMobile ? "w-screen h-[50vh]" : "w-[50vw] h-screen")}
         ></div>
       </div>
       <img
         src={topImage}
-        className="absolute top-0 left-0 -z-[1] w-full h-[100vh] object-cover"
+        className="absolute top-0 left-0 -z-1 w-full h-screen object-cover"
       />
     </>
   );
