@@ -28,7 +28,7 @@ const CarouselItem: FC<CarouselItemProps> = ({imageClassName, ...props}) => {
           }
           className={clsx(
             "object-cover cursor-zoom-in z-10 transition-opacity duration-300 hover:opacity-20",
-            imageClassName
+            imageClassName,
           )}
         />
       )}

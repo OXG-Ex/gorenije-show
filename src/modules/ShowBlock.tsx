@@ -8,6 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import clsx from "clsx";
+import "photoswipe/dist/photoswipe.css";
 import {type FC, type ReactNode} from "react";
 import {Gallery} from "react-photoswipe-gallery";
 import {Carousel} from "../components/Carousel";
