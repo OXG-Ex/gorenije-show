@@ -163,7 +163,7 @@ function App() {
         <BlockSplitter
           imgSrc={pyroBlockImage}
           subtitle="когда нужен красивый финал"
-          title="Пиротехническое шоу"
+          title="Шоу для камерных событий"
         />
 
         <ShowBlock
