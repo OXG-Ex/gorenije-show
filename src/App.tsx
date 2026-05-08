@@ -53,12 +53,21 @@ function App() {
             thumbnailSrc: getImageUrl(img.min),
           }))}
           headerImg={getImageUrl(firePyrotechnicShow_RussianFlex[6].original)}
+          previewSrc={getImageUrl(firePyrotechnicShow_RussianFlex[1].min)}
           options={[
-            {price: "29 000 рублей", timing: "2 артиста", type: "База"},
-            {price: "40 000 рублей", timing: "3 артиста", type: "Стандарт"},
-            {price: "47 000 рублей", timing: "3 артиста", type: "Премиум"},
-            {price: "9 минут", timing: "", type: "Продолжительность"},
+            {price: "29 000 рублей", artistsCount: "2 артиста", type: "База"},
+            {
+              price: "40 000 рублей",
+              artistsCount: "3 артиста",
+              type: "Стандарт",
+            },
+            {
+              price: "47 000 рублей",
+              artistsCount: "3 артиста",
+              type: "Премиум",
+            },
           ]}
+          timitng="9 минут"
           subtitles={[
             "5 видов огненного реквизита;",
             "4 вида пиротехнического реквизита;",
@@ -79,16 +88,29 @@ function App() {
             originalSrc: getImageUrl(img.original),
             thumbnailSrc: getImageUrl(img.min),
           }))}
+          previewSrc={getImageUrl(firePyrotechnicShow_RussianFaityTales[3].min)}
           headerImg={getImageUrl(
             firePyrotechnicShow_RussianFaityTales[0].original,
           )}
           options={[
-            {price: "30 000 рублей", timing: "2 артиста", type: "База"},
-            {price: "40 000 рублей", timing: "3 артиста", type: "Стандарт"},
-            {price: "55 000 рублей", timing: "4 артиста", type: "Премиум"},
-            {price: "75 000 рублей", timing: "5 артистов", type: "Максимум"},
-            {price: "9 минут", timing: "", type: "Продолжительность"},
+            {price: "30 000 рублей", artistsCount: "2 артиста", type: "База"},
+            {
+              price: "40 000 рублей",
+              artistsCount: "3 артиста",
+              type: "Стандарт",
+            },
+            {
+              price: "55 000 рублей",
+              artistsCount: "4 артиста",
+              type: "Премиум",
+            },
+            {
+              price: "75 000 рублей",
+              artistsCount: "5 артистов",
+              type: "Максимум",
+            },
           ]}
+          timitng="9 минут"
           subtitles={[
             "5 видов огненного реквизита;",
             "5 видов пиротехнического реквизита;",
@@ -111,11 +133,20 @@ function App() {
             thumbnailSrc: getImageUrl(img.min),
           }))}
           headerImg={getImageUrl(firePyrotechnicShow_GoldenDream[3].original)}
+          previewSrc={getImageUrl(firePyrotechnicShow_GoldenDream[0].min)}
           options={[
-            {price: "35 000 рублей", timing: "3 артиста", type: "Стандарт"},
-            {price: "40 000 рублей", timing: "3 артиста", type: "Премиум"},
-            {price: "9 минут", timing: "", type: "Продолжительность"},
+            {
+              price: "35 000 рублей",
+              artistsCount: "3 артиста",
+              type: "Стандарт",
+            },
+            {
+              price: "40 000 рублей",
+              artistsCount: "3 артиста",
+              type: "Премиум",
+            },
           ]}
+          timitng="9 минут"
           subtitles={[
             "5 видов огненного реквизита;",
             "4 вида пиротехнического реквизита;",
@@ -143,12 +174,17 @@ function App() {
             originalSrc: getImageUrl(img.original),
             thumbnailSrc: getImageUrl(img.min),
           }))}
+          previewSrc={getImageUrl(firePyrotechnicShow_Dragon[5].min)}
           headerImg={getImageUrl(firePyrotechnicShow_Dragon[6].original)}
           options={[
-            {price: "23 000 рублей", timing: "1 артист", type: "Стандарт"},
-            {price: "26 000 рублей", timing: "1 артист", type: "Премиум"},
-            {price: "8 минут", timing: "", type: "Продолжительность"},
+            {
+              price: "23 000 рублей",
+              artistsCount: "1 артист",
+              type: "Стандарт",
+            },
+            {price: "26 000 рублей", artistsCount: "1 артист", type: "Премиум"},
           ]}
+          timitng="8 минут"
           subtitles={[
             "3 вида огненного реквизита;",
             "3 вида пиротехнического реквизита;",
@@ -169,12 +205,17 @@ function App() {
             originalSrc: getImageUrl(img.original),
             thumbnailSrc: getImageUrl(img.min),
           }))}
+          previewSrc={getImageUrl(firePyrotechnicShow_SparkleNight[1].min)}
           headerImg={getImageUrl(firePyrotechnicShow_SparkleNight[0].original)}
           options={[
-            {price: "20 000 рублей", timing: "1 артист", type: "Стандарт"},
-            {price: "25 000 рублей", timing: "1 артист", type: "Премиум"},
-            {price: "8 минут", timing: "", type: "Продолжительность"},
+            {
+              price: "20 000 рублей",
+              artistsCount: "1 артист",
+              type: "Стандарт",
+            },
+            {price: "25 000 рублей", artistsCount: "1 артист", type: "Премиум"},
           ]}
+          timitng="8 минут"
           subtitles={[
             "3 вида огненного реквизита;",
             "3 вида пиротехнического реквизита;",
@@ -202,15 +243,26 @@ function App() {
               thumbnailSrc: getImageUrl(img.min),
             }),
           )}
+          previewSrc={getImageUrl(
+            firePyrotechnicShow_TeslaShowAndInteractive_TeslaShow[1].min,
+          )}
           headerImg={getImageUrl(
             firePyrotechnicShow_TeslaShowAndInteractive_TeslaShow[0].original,
           )}
           title="Тесла-шоу"
           options={[
-            {price: "18 000 рублей", timing: "2 артиста", type: "Стандарт"},
-            {price: "22 000 рублей", timing: "3 артиста", type: "Премиум"},
-            {price: "30 минут", timing: "", type: "Продолжительность"},
+            {
+              price: "18 000 рублей",
+              artistsCount: "2 артиста",
+              type: "Стандарт",
+            },
+            {
+              price: "22 000 рублей",
+              artistsCount: "3 артиста",
+              type: "Премиум",
+            },
           ]}
+          timitng="30 минут"
           subtitles={[
             "Световой реквизит;",
             "Катушка Тесла;",
@@ -228,16 +280,17 @@ function App() {
             originalSrc: getImageUrl(img.original),
             thumbnailSrc: getImageUrl(img.min),
           }))}
+          previewSrc={getImageUrl(mirrorLaserShow[1].min)}
           headerImg={getImageUrl(mirrorLaserShow[2].original)}
           title="Зеркальное шоу"
           options={[
-            {price: "22 000 рублей", timing: "3 артиста", type: "Стандарт"},
             {
-              price: "7 минут + интерактив",
-              timing: "",
-              type: "Продолжительность",
+              price: "22 000 рублей",
+              artistsCount: "3 артиста",
+              type: "Стандарт",
             },
           ]}
+          timitng="7 минут + интерактив"
           subtitles={[
             "Зеркальный, лазерный и световой реквизит;",
             "Кинетическая скульптура - вертушка;",
@@ -255,16 +308,17 @@ function App() {
             originalSrc: getImageUrl(img.original),
             thumbnailSrc: getImageUrl(img.min),
           }))}
+          previewSrc={getImageUrl(snowShow[3].min)}
           headerImg={getImageUrl(snowShow[1].original)}
           title="Снежное шоу"
           options={[
-            {price: "22 000 рублей", timing: "3 артиста", type: "Стандарт"},
             {
-              price: "20 минут",
-              timing: "",
-              type: "Продолжительность",
+              price: "22 000 рублей",
+              artistsCount: "3 артиста",
+              type: "Стандарт",
             },
           ]}
+          timitng="20 минут"
           subtitles={[
             "Световой реквизит;",
             "Хвост павлина;",

@@ -1,6 +1,7 @@
 import {
   Button,
   Paper,
+  Table,
   TableCell,
   TableRow,
   Typography,
@@ -17,7 +18,7 @@ import VideoPlayer from "../components/VideoPlayer";
 
 type ShowOption = {
   type: string;
-  timing: string;
+  artistsCount: string;
   price: string;
 };
 
@@ -27,8 +28,10 @@ interface ShowBlockProps {
   options: ShowOption[];
   riderText?: ReactNode;
   videoSrc?: string;
+  previewSrc: string;
   imagesSrc?: {thumbnailSrc: string; originalSrc: string}[];
   headerImg?: string;
+  timitng?: string;
 }
 
 const ShowBlock: FC<ShowBlockProps> = ({
@@ -36,9 +39,11 @@ const ShowBlock: FC<ShowBlockProps> = ({
   subtitles,
   title,
   // riderText,
+  timitng,
   videoSrc,
   imagesSrc,
   headerImg,
+  previewSrc,
 }) => {
   // const [open, setOpen] = useState(false);
   // const handleOpen = () => setOpen(true);
@@ -74,7 +79,9 @@ const ShowBlock: FC<ShowBlockProps> = ({
         >
           <div className="flex w-full gap-4">
             <div className="flex flex-col gap-2">
-              {videoSrc && <VideoPlayer src={videoSrc} />}
+              {videoSrc && (
+                <VideoPlayer src={videoSrc} previewSrc={previewSrc} />
+              )}
 
               {imagesSrc && (
                 <Gallery
@@ -131,35 +138,71 @@ const ShowBlock: FC<ShowBlockProps> = ({
 
             <div
               className={clsx(
-                "flex flex-col overflow-x-scroll",
+                "flex flex-col overflow-x-scroll gap-2",
                 !isMobile &&
-                  "scrollbar-hide [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+                  "scrollbar-hide [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden max-w-[530px]",
               )}
             >
-              {options.map((row) => (
-                <TableRow
-                  key={row.type}
+              <Table>
+                {options.map((row) => (
+                  <TableRow
+                    key={row.type}
+                    sx={{
+                      "&:last-child td, &:last-child th": {
+                        border: 0,
+                      },
+                    }}
+                  >
+                    <TableCell
+                      component="th"
+                      scope="row"
+                      sx={{fontSize: "1rem"}}
+                    >
+                      {row.type}
+                    </TableCell>
+                    <TableCell align="right" sx={{fontSize: "1rem"}}>
+                      {row.artistsCount}
+                    </TableCell>
+                    <TableCell
+                      align="right"
+                      sx={{fontSize: "1rem", fontWeight: "600"}}
+                    >
+                      {row.price}
+                    </TableCell>
+                  </TableRow>
+                ))}
+
+                {/* <TableRow
                   sx={{
                     "&:last-child td, &:last-child th": {
                       border: 0,
                     },
-                    display: "flex",
+                    // display: "flex",
                   }}
                 >
                   <TableCell component="th" scope="row" sx={{fontSize: "1rem"}}>
-                    {row.type}
+                    Продолжительность
                   </TableCell>
-                  <TableCell align="right" sx={{fontSize: "1rem"}}>
-                    {row.timing}
-                  </TableCell>
+                  <TableCell
+                    component="th"
+                    scope="row"
+                    sx={{fontSize: "1rem"}}
+                  ></TableCell>
                   <TableCell
                     align="right"
                     sx={{fontSize: "1rem", fontWeight: "600"}}
                   >
-                    {row.price}
+                    {timitng}
                   </TableCell>
-                </TableRow>
-              ))}
+                </TableRow> */}
+              </Table>
+              <div className="flex justify-between w-full gap-2 px-4">
+                <Typography variant="h6">Продолжительность</Typography>
+
+                <Typography variant="h6" fontWeight={600} className="text-end">
+                  {timitng}
+                </Typography>
+              </div>
             </div>
 
             <Button

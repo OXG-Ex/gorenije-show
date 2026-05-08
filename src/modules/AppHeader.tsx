@@ -1,4 +1,4 @@
-import {IconButton, SvgIcon, useMediaQuery, useTheme} from "@mui/material";
+import {Box, IconButton, SvgIcon, useMediaQuery, useTheme} from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -45,7 +45,13 @@ export const AppHeader = () => {
             isMobile && "flex-col-reverse items-end",
           )}
         >
-          <div className="flex gap-2">
+          <Box
+            className={clsx(
+              "flex gap-2 overflow-hidden",
+              isMobile && trigger && "h-0",
+            )}
+            sx={{transition: "height 0.2s linear 0s"}}
+          >
             <IconButton
               size="large"
               className="w-10"
@@ -77,7 +83,7 @@ export const AppHeader = () => {
             >
               <SvgIcon component={VkIcon} inheritViewBox />
             </IconButton>
-          </div>
+          </Box>
 
           <div
             className={clsx(
